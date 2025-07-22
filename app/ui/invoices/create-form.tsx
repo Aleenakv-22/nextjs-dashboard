@@ -52,7 +52,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
     e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>
   ) {
     const { name, value } = e.target;
-    let data = { ...fields, [name]: value };
+    const data = { ...fields, [name]: value };
     if (name === "amount") {
       data.amount = value;
     }
